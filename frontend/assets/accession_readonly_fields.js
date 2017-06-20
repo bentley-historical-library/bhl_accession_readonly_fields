@@ -1,14 +1,12 @@
 $(function () {
-  var disable_accession_fields = function () {
-    $("#accession_title_").attr("readonly", "readonly");
-    $("#accession_title_").prop("disabled", true);
-    $("#accession_inventory_").attr("readonly", "readonly");
-    $("#accession_inventory_").prop("disabled", true);
-    $("#accession_retention_rule_").attr("readonly", "readonly");
-    $("#accession_retention_rule_").prop("disabled", true);
-    $("#accession_user_defined__string_1_").attr("readonly", "readonly");
-    $("#accession_user_defined__string_1_").prop("disabled", true);
-  };
+  var fields = ["accession_title_", "accession_inventory_", 
+                "accession_retention_rule_", "accession_user_defined__string_1_", 
+                "accession_restrictions_apply_", "accession_publish_",
+                "accession_access_restrictions_", "accession_resource_type_",
+                "accession_use_restrictions_"];
 
-  disable_accession_fields();
+  fields.map(function (field) {
+    $("#".concat(field)).attr("readonly", "readonly");
+    $("#".concat(field)).prop("disabled", true);
+  });
 })
