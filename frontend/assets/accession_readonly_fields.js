@@ -13,7 +13,6 @@ $(function () {
 
   hidden_fields.map(function (field) {
     var fld_for = $("[for='" + field + "']");
-    var
     fld_label.parent().hide();
   });
 
