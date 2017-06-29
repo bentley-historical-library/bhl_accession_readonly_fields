@@ -13,7 +13,7 @@ $(function () {
 
   hidden_fields.map(function (field) {
     var fld_for = $("[for='" + field + "']");
-    fld_label.parent().hide();
+    fld_for.parent().hide();
   });
 
   $('section[id$=collection_management_]').find($('.control-label').filter(function() { return $(this).text() === "Rights determined?"})).parent().hide();
