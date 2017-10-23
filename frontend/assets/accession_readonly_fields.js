@@ -26,6 +26,5 @@ $(function () {
 
   readonly_fields.map(function (field) {
     $("#".concat(field)).attr("readonly", "readonly");
-    $("#".concat(field)).prop("disabled", true);
   });
 })
