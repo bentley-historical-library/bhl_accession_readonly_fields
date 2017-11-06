@@ -18,8 +18,6 @@ AccessionReadOnlyFields.prototype.init = function() {
     var fld_for = $("[for='" + field + "']");
     fld_for.parent().hide();
   });
-
-  $('section[id$=accession_collection_management_]').find($('.control-label').filter(function() { return $(this).text() === "Rights determined?"})).parent().hide();
   
   var readonly_fields = ["accession_title_", "accession_inventory_", 
                         "accession_retention_rule_", "accession_user_defined__string_1_", 
@@ -29,6 +27,5 @@ AccessionReadOnlyFields.prototype.init = function() {
 
   readonly_fields.map(function (field) {
     $("#".concat(field)).attr("readonly", "readonly");
-    $("#".concat(field)).prop("disabled", true);
   });
 };
