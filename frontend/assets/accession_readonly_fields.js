@@ -1,4 +1,7 @@
-$(function () {
+function AccessionReadOnlyFields() {
+}
+
+AccessionReadOnlyFields.prototype.init = function() {
   var hidden_sections = ["accession_dates_", "accession_subjects_",
                         "accession_rights_statements_", "accession_classifications_"];
   
@@ -15,8 +18,6 @@ $(function () {
     var fld_for = $("[for='" + field + "']");
     fld_for.parent().hide();
   });
-
-  $('section[id$=collection_management_]').find($('.control-label').filter(function() { return $(this).text() === "Rights determined?"})).parent().hide();
   
   var readonly_fields = ["accession_title_", "accession_inventory_", 
                         "accession_retention_rule_", "accession_user_defined__string_1_", 
@@ -27,4 +28,4 @@ $(function () {
   readonly_fields.map(function (field) {
     $("#".concat(field)).attr("readonly", "readonly");
   });
-})
+};
