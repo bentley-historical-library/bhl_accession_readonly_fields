@@ -1,8 +1,9 @@
 function AccessionReadOnlyFields() {
 }
 
+//accession_subjects_
 AccessionReadOnlyFields.prototype.init = function() {
-  var hidden_sections = ["accession_dates_", "accession_subjects_",
+  var hidden_sections = ["accession_dates_", 
                         "accession_rights_statements_", "accession_classifications_"];
   
   hidden_sections.map(function (section) {
